@@ -1,8 +1,10 @@
-﻿using DataAccess.Abstract;
+﻿/*
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Concrete.InMemory
@@ -14,11 +16,11 @@ namespace DataAccess.Concrete.InMemory
         {
             _cars = new List<Car>
             {
-                new Car{CarId=1,BrandId=1,ColorId="Beyaz",DailyPrice=600,ModelYear=2015,Description="Mercedes C180"},
-                new Car{CarId=2,BrandId=2,ColorId="Siyah",DailyPrice=700,ModelYear=2017,Description="Wolkswagen Passat"},
-                new Car{CarId=3,BrandId=2,ColorId="Mavi",DailyPrice=550,ModelYear=2013,Description="Wolkswagen Golf"},
-                new Car{CarId=4,BrandId=3,ColorId="Beyaz",DailyPrice=350,ModelYear=2010,Description="Renault Clio"},
-                new Car{CarId=5,BrandId=3,ColorId="Gri",DailyPrice=400,ModelYear=2011,Description="Renault Megane"}
+                new Car{CarId=1,BrandId=1,ColorId=1,Brand="Mercedes",Color="Beyaz",DailyPrice=600,ModelYear=2015,Description="Mercedes C180"},
+                new Car{CarId=2,BrandId=2,ColorId=2,Brand="Wolkswagen",Color="Siyah",DailyPrice=700,ModelYear=2017,Description="Wolkswagen Passat"},
+                new Car{CarId=3,BrandId=2,ColorId=3,Brand="Wolkswagen",Color="Mavi",DailyPrice=550,ModelYear=2013,Description="Wolkswagen Golf"},
+                new Car{CarId=4,BrandId=3,ColorId=1,Brand="Renault",Color="Beyaz",DailyPrice=350,ModelYear=2010,Description="Renault Clio"},
+                new Car{CarId=5,BrandId=3,ColorId=4,Brand="Renault",Color="Gri",DailyPrice=400,ModelYear=2011,Description="Renault Megane"}
 
             };
 
@@ -43,6 +45,11 @@ namespace DataAccess.Concrete.InMemory
 
         }
 
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetById(int CarId)
         {
 
@@ -61,3 +68,4 @@ namespace DataAccess.Concrete.InMemory
         }
     }
 }
+*/
